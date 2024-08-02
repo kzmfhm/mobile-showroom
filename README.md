@@ -1,34 +1,67 @@
-# mobile-showroom
+# Mobile Showroom
 
-## git commands for starting project from scratch
+An online mobile showroom website exclusively for cars.
 
-1- python -m venv env  
-2- env/Scripts/activate
-3- pip install -r requirements.txt  
-4- django-admin startproject ecommerce
-5- cd ecommerce
-6- python manage.py startapp store
-7- python manage.py makemigrations  
-8- python manage.py migrate
-9- python manage.py runserver
+## Getting Started
 
-    If you want to create super user then run this command on your terminal
+### Prerequisites
 
-10- python manage.py createsuperuser
+- Python 3.x
+- pip (Python package installer)
+- Git
 
-## git commands for this project
+### Installation
 
-1- git clone [clone](https://github.com/kzmfhm/mobile-showroom.git)  
- creating virtual environment
-2- python -m venv env  
-4- env/Scripts/activate
-5- pip install -r requirements.txt  
-6- django-admin startproject ecommerce
-7- cd ecommerce
-8- python manage.py makemigrations  
-9- python manage.py migrate
-10- python manage.py runserver
+1. Clone the repository:
 
-### ⭐️Support
+   ```bash
+   git clone https://github.com/kzmfhm/mobile-showroom.git
+   ```
 
-Give a ⭐️ if this project helped you!
+2. Create and activate a virtual environment:
+
+   ```bash
+   python -m venv env
+   source env/Scripts/activate  # On Windows
+   # source env/bin/activate  # On macOS/Linux
+   ```
+
+3. Install the required packages:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Start the Django project:
+
+   ```bash
+   django-admin startproject ecommerce
+   cd ecommerce
+   ```
+
+5. Create the `store` app:
+
+   ```bash
+   python manage.py startapp store
+   ```
+
+6. Apply migrations:
+
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+
+7. Run the development server:
+
+   ```bash
+   python manage.py runserver
+   ```
+
+### Creating a Superuser
+
+To create a superuser for accessing the Django admin panel, run:
+
+```bash
+python manage.py createsuperuser
+```
