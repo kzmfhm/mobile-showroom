@@ -1,12 +1,9 @@
 :root {
-    --color-form: #f5f7f9;
+
     --font-family: 'Roboto', sans-serif;
     --primary-color: #ff553e;
-    --secondary-color: #333;
     --white-color: #fff;
-    --black-color: #000;
-    --light-color: #f8f9fa;
-    --accent-color: #a1a1a1;
+   
 }
 
 body {
@@ -25,7 +22,7 @@ a {
 
 .box-element {
     box-shadow: hsl(0, 0%, 80%) 0 0 16px;
-    background-color: #fff;
+    background-color: var(--white-color);
     border-radius: 4px;
     padding: 10px;
 }
@@ -73,29 +70,8 @@ a {
 
 .nav-bg {
     box-shadow: hsl(0, 0%, 80%) 0 0 16px;
-    background-color: #fff;
+    background-color: var(--white-color);
 }
-
-#cart-icon{
-	width:25px;
-	display: inline-block;
-	margin-left: 50px;
-}
-
-
-#cart-total {
-	display: flex;
-	cursor: pointer;
-	top: 0;
-	right: 0;
-	transform: translate(50%, -50%);
-	background-color: red;
-	color: white;
-	padding: 5px 5;
-	border-radius: 50%;
-	justify-content: center;
-	align-items: center;
-  }
 
 .col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12 {
     margin-top: 10px;
@@ -109,41 +85,6 @@ a {
     width: 100px;
 }
 
-.form-field {
-    width: 250px;
-    display: inline-block;
-    padding: 5px;
-}
-
-.cart-row {
-    display: flex;
-    align-items: flex-stretch;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ececec;
-}
-
-.quantity {
-    display: inline-block;
-    font-weight: 700;
-    padding-right: 10px;
-}
-
-.chg-quantity {
-    width: 12px;
-    cursor: pointer;
-    display: block;
-    margin-top: 5px;
-    transition: .1s;
-}
-
-.chg-quantity:hover {
-    opacity: .6;
-}
-
-.hidden {
-    display: none !important;
-}
 
 /* header */
 #navigation-wrap {
@@ -301,27 +242,7 @@ a {
         font-size: 1.125rem;
         line-height: 1.5625rem;
     }
-    #login-btn{
-        width: 95% !important;
-       
-    }
-    #signup-btn{
-        width: 95% !important;
-     
-       
-    }
-    .cart-container{
-        display: flex;
-        text-align: center;
-        margin-left: 6rem;
-        width: 100px;
-        height: 80px;
-        align-items: center;
-        justify-content: center;
-      
-    }
-   #cart-total{
-    margin-top: 1.5rem;
-   }
+
+
 }
 
