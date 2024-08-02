@@ -1,0 +1,80 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div class="row gy-4">
+    <!-- banner -->
+    <section id="home">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="1000">
+                    <img src="{% static 'assets/blue_mustang.jpg' %}" class="d-block w-100" alt="..." style="height: 600px;">
+                    <div class="carousel-caption text-center">
+                        <h1>Mobile Showroom</h1>
+                        <p>Welcome to your ultimate car destination! Explore a wide range of the latest and greatest automobiles in our online mobile showroom. From sleek sports cars to reliable family vehicles, we have it all. Start your journey with us.</p>
+                        <a  class="main-btn">Shop now</a>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="{% static 'assets/mustang-1.jpg' %}" class="d-block w-100 " alt="..." style="height: 600px;">
+                    <div class="carousel-caption text-center">
+                        <h1>Mobile Showroom</h1>
+                        <p>Welcome to your ultimate car destination! Explore a wide range of the latest and greatest automobiles in our online mobile showroom. From sleek sports cars to reliable family vehicles, we have it all. Start your journey with us.</p>
+                        <a  class="main-btn">Shop now</a>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="{% static 'assets/red-car.jpg' %}" class="d-block w-100 " alt="..." style="height: 600px;">
+                    <div class="carousel-caption text-center">
+                        <h1>Mobile Showroom</h1>
+                        <p>Welcome to your ultimate car destination! Explore a wide range of the latest and greatest automobiles in our online mobile showroom. From sleek sports cars to reliable family vehicles, we have it all. Start your journey with us.</p>
+                        <a class="main-btn">Shop now</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="cols-12 mb-2 text-content text-center ">
+            <div class="card-detail">
+            <h1 class="font-monospace">WELCOME TO OUR CAR OFFICE</h1>
+            <p>Explore our exclusive online showroom featuring premium cars from top companies. Enjoy a seamless experience with detailed car
+                 information, stunning images, and various models. Find your perfect car from the comfort of your home.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    {% for company in companies %}
+    <div class="col-lg-4">
+        <div class="thumbnail">
+                
+            {% if company.image %}
+                <a href="{% url 'catalog' company.id %}">
+                    <img src="{{ company.imageURL }}" alt="{{ company.name }}">
+                </a>
+            {% else %}
+                <p>No image available</p>
+            {% endif %}
+            </div>
+            <div class="box-element product">
+                <hr>
+            <a href="{% url 'catalog' company.id %}" style="text-decoration: none; text-transform: uppercase;">
+                <h4><strong>{{ company.name }}</strong></h4>
+            </a>
+        </div>
+        </div>
+        
+        {% endfor %}
+</div>
+
+{% endblock content %}
+
+
