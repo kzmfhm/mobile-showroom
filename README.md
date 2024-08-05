@@ -1,6 +1,6 @@
 # Mobile Showroom
 
-An online mobile showroom website exclusively for cars..
+An online mobile showroom website exclusively for cars.
 
 ## Getting Started
 
