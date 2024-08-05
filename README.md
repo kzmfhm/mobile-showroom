@@ -65,3 +65,7 @@ To create a superuser for accessing the Django admin panel, run:
 ```bash
 python manage.py createsuperuser
 ```
+
+### ⭐️Support
+
+Give a ⭐️ if this project helped you!
