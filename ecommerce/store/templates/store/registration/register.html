@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    {% block content %}
+    <div class="login-container">
+        <form method="post" class="form-container">
+            {% csrf_token %}
+            <h1>Register</h1>
+            <div>
+                {{ form.username }}
+                <p id="username_error" style="color: red;"></p>
+            </div>
+            <div>
+                {{ form.email }}
+                <p id="email_error" style="color: red;"></p>
+            </div>
+            <div>
+                {{ form.password1 }}
+                <p id="password1_error" style="color: red;"></p>
+            </div>
+            <button class='form-button' type='submit'>
+                <div class="loading-container">
+                    <div class="loader"></div>
+                </div>
+                <span class="button-text">Register</span>
+            </button>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('form').on('submit', function() {
+                // Show the loader and hide the text
+                $('.loading-container').show();
+                $('.button-text').hide();
+                $('.form-button').prop('disabled', true);
+            });
+    
+            function validateField(field) {
+                const csrfToken = $('[name="csrfmiddlewaretoken"]').val();
+                const value = $(`[name=${field}]`).val();
+    
+                $.ajax({
+                    type: 'POST',
+                    url: '{% url "validate_form" %}',
+                    data: {
+                        csrfmiddlewaretoken: csrfToken,
+                        [field]: value,
+                        field: field
+                    },
+                    success: function(response) {
+                        if (response[field] !== "valid") {
+                            $(`#${field}_error`).text(response[field]);
+                        } else {
+                            $(`#${field}_error`).text('');
+                        }
+                    }
+                });
+            }
+    
+            $('[name="username"]').blur(function() {
+                validateField('username');
+            });
+            $('[name="email"]').blur(function() {
+                validateField('email');
+            });
+            $('[name="password1"]').blur(function() {
+                validateField('password1');
+            });
+        });
+    </script>
+    {% endblock content %}
+</body>
+</html>

@@ -67,7 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-               
+                'store.context_processors.cart_items'
             ],
         },
     },
@@ -133,3 +133,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/assets')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'catelog'
+LOGOUT_REDIRECT_URL = 'store'
