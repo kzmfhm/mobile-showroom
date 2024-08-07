@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="ecommerce\static\assets\logo.png" alt="Logo" width="200" height="200">
+  <img src="ecommerce/static/assets/logo.png" alt="Logo" width="200" height="200">
   <h1>Mobile Showroom for cars</h1>
   <p>
   📹An online mobile showroom website exclusively for cars.✨.
@@ -39,23 +39,23 @@
 
 ### Photos
 
-![My Project Screen Shot](ecommerce\static\assets\project\home.jpg)
+![My Project Screen Shot](ecommerce/static/assets/project/home.jpg)
 
-![My Project Screen Shot](secommerce\static\assets\project\companies.jpg)
+![My Project Screen Shot](ecommerce/static/assets/project/companies.jpg)
 
-![My Project Screen Shot](ecommerce\static\assets\project\company-cars.jpg)
+![My Project Screen Shot](ecommerce/static/assets/project/company-cars.jpg)
 
-![My Project Screen Shot](ecommerce\static\assets\project\car-details.jpg)
+![My Project Screen Shot](ecommerce/static/assets/project/car-details.jpg)
 
-![My Project Screen Shot](ecommerce\static\assets\project\cart.jpg)
+![My Project Screen Shot](ecommerce/static/assets/project/cart.jpg)
 
-![My Project Screen Shot](ecommerce\static\assets\project\checkout.jpg)
+![My Project Screen Shot](ecommerce/static/assets/project/checkout.jpg)
 
-![My Project Screen Shot](ecommerce\static\assets\project\login.jpg)
+![My Project Screen Shot](ecommerce/static/assets/project/login.jpg)
 
-![My Project Screen Shot](ecommerce\static\assets\project\register.jpg)
+![My Project Screen Shot](ecommerce/static/assets/project/register.jpg)
 
-![My Project Screen Shot](ecommerce\static\assets\project\payment-way.jpg)
+![My Project Screen Shot](ecommerce/static/assets/project/payment-way.jpg)
 
   <p align="right"><a href="#readme-top">back to top</a></p>
 
