@@ -127,4 +127,4 @@ python manage.py createsuperuser
 
 ### ⭐️Support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️ if this project helped you.
