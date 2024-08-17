@@ -11,7 +11,7 @@
                     <div class="carousel-caption text-center">
                         <h1>Mobile Showroom</h1>
                         <p>Welcome to your ultimate car destination! Explore a wide range of the latest and greatest automobiles in our online mobile showroom. From sleek sports cars to reliable family vehicles, we have it all. Start your journey with us.</p>
-                        <a  class="main-btn">Shop now</a>
+                        <a  class="main-btn" href="#companies">Shop now</a>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
@@ -19,7 +19,7 @@
                     <div class="carousel-caption text-center">
                         <h1>Mobile Showroom</h1>
                         <p>Welcome to your ultimate car destination! Explore a wide range of the latest and greatest automobiles in our online mobile showroom. From sleek sports cars to reliable family vehicles, we have it all. Start your journey with us.</p>
-                        <a  class="main-btn">Shop now</a>
+                        <a  class="main-btn" href="#companies">Shop now</a>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
@@ -27,7 +27,7 @@
                     <div class="carousel-caption text-center">
                         <h1>Mobile Showroom</h1>
                         <p>Welcome to your ultimate car destination! Explore a wide range of the latest and greatest automobiles in our online mobile showroom. From sleek sports cars to reliable family vehicles, we have it all. Start your journey with us.</p>
-                        <a class="main-btn">Shop now</a>
+                        <a  class="main-btn" href="#companies">Shop now</a>
                     </div>
                 </div>
             </div>
@@ -41,20 +41,19 @@
             </button>
         </div>
     </section>
-    <div class="container">
+    <div class="container" >
         <div class="row mt-4">
             <div class="cols-12 mb-2 text-content text-center ">
             <div class="card-detail">
-            <h1 class="font-monospace">WELCOME TO OUR CAR OFFICE</h1>
-            <p>Explore our exclusive online showroom featuring premium cars from top companies. Enjoy a seamless experience with detailed car
-                 information, stunning images, and various models. Find your perfect car from the comfort of your home.</p>
+            <h1 class="font-monospace" >WELCOME TO OUR CAR OFFICE</h1>
+            <p>Explore our exclusive online showroom featuring premium cars from top companies. Enjoy a seamless experience with detailed car information, stunning images, and various models. Find your perfect car from the comfort of your home.</p>
             </div>
             </div>
         </div>
     </div>
     {% for company in companies %}
     <div class="col-lg-4">
-        <div class="thumbnail">
+        <div class="thumbnail" id="companies">
                 
             {% if company.image %}
                 <a href="{% url 'catalog' company.id %}">

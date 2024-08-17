@@ -50,9 +50,12 @@
                 <p><strong>Transmission Type:</strong> {{ product.transmission_type }}</p>
                 <p style="text-transform: capitalize;"><strong>Color Options:</strong> {{ product.color_options }}</p>
                 <p><strong>Description:</strong> {{ product.description }}</p>
-                
+                <hr>
+                <button id="liveToastBtn"  data-product="{{product.id}}" 
+                data-action="add" class="btn btn-success add-btn update-cart">Add to Cart</button>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock content %}
